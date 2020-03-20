@@ -36,7 +36,10 @@ def CreateFinalFile(fileName,data,fileContent):
     import pandas as pd
     from tabulate import tabulate
     
-    data = pd.concat([data[0].reset_index().drop(columns=['index']),data[1].reset_index().drop(columns=['index'])], axis=1, sort=False)
+    if data[1] is not None:
+        data = pd.concat([data[0].reset_index().drop(columns=['index']),data[1].reset_index().drop(columns=['index'])], axis=1, sort=False)
+    else:
+        data = data[0]
     
     fileContent += tabulate(data, headers='keys', tablefmt='rst', showindex=False)
     fileContent = fileContent[:fileContent.rfind('\n')]
