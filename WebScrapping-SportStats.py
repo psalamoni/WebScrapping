@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # specify urls
-urlPages = ['https://east.sportstats.ca/display-results.xhtml?raceid=13143']
+urlPages = []
 
 # Specify the sleep time
 sleepTime = .1 
@@ -16,7 +16,7 @@ oldColumnName = ['CATEGORY']
 newColumnName = ['AGE']
 
 # Specify output folder
-outputFolder = "/home/setup/Documents/roadraceresults/Results/Unsent Results/SportStats/"
+outputFolder = ''
 
 #===============================================================================================================================================
 #
@@ -31,7 +31,7 @@ Created on Thu Mar  5 15:29:20 2020
 """
 
 # import libraries
-from WebScrapping import CollectData,CollectTable,TableToData,CreateFinalFile
+from WebScrapping import CollectData,CollectTable,TableToData,CreateFinalFile,GUI,GUIKill,GUIChangeStatus,GUIChangeError
 import time
 import re
 
@@ -48,7 +48,7 @@ def CollectInnerData(driver):
     
     for i,nameHTML in enumerate(namesHTML):
         try:
-            nameHTML.click()
+            driver.execute_script("arguments[0].click();", nameHTML)
             #time.sleep(sleepTime)
         except:
             if data is None:
@@ -56,12 +56,14 @@ def CollectInnerData(driver):
             else:
                 data = data.append(pd.Series(), ignore_index=True)
         else:
+            initialTime = int(time.time())
             while True:
                 try:
                     innerTableHTML = CollectTable(driver,innerXpath)[0].get_attribute('innerHTML')
                     innerTableStyle = CollectTable(driver,innerXpath)[0].get_attribute('style')
                 except:
                     continue
+                
                 if (innerTableHTMLOld!=innerTableHTML) or (innerTableStyleOld!=innerTableStyle):
                     innerTableStyleOld = innerTableStyle
                     innerTableHTMLOld = innerTableHTML
@@ -74,6 +76,11 @@ def CollectInnerData(driver):
                     else:                
                         data = data.append(innerDataRow)
                     break
+                
+                if int(time.time())-initialTime>100:
+                    GUIChangeError('Runtime Error - 83')
+                    driver.quit()
+                    GUIKill()
             
     return data
 
@@ -106,17 +113,20 @@ def ProcessData(bulkData):
             
     return bulkData
 
-def CreateFile(urlPage,data,driver):    
+def CreateFile(urlPage,data,driver):
+    global outputFolder
+        
     raceTitleHTML = driver.find_elements_by_xpath("//div[@id='main']//h1[1]")
     raceTitle = raceTitleHTML[0].text
     raceDateTypeHTML = driver.find_elements_by_xpath("//div[@id='main']//p[1]")
     
     try:
         [raceDate,raceType] = re.split(r"•", raceDateTypeHTML[0].text)
+        fileString = raceTitle + "_" + raceDate + "_" + raceType
     except:
-        print("Something went wrong, contact Pedro Salamoni [Descriptions Pattern Error][3]")
+        fileString = raceTitle
+        GUIChangeError("Procedure Error - 127")
         
-    fileString = raceTitle + "_" + raceDate + "_" + raceType
     fileString = fileString.replace('/', '-')
     fileName = outputFolder + fileString + ".txt"
     
@@ -125,49 +135,84 @@ def CreateFile(urlPage,data,driver):
     CreateFinalFile(fileName,data,heading)
             
 
-def PageScrapping(urlInfo,urlPage):
-    driver = CollectData(urlPage)
+def PageScrapping(driver,urlInfo,urlPage):
+    driver = CollectData(driver,urlPage)
     data = None
     pageNumber=1
     
     # Loop to identify where should the script go for another page
+    
     while (len(driver.find_elements_by_xpath("//tr[@role='row']//td[4]//a"))>0):
-        print(urlInfo,'Page:',pageNumber)
+        
+        GUIChangeStatus(urlInfo+' Page: '+str(pageNumber))
         
         viewbtnHTML = driver.find_elements_by_xpath("//tr[@role='row']//div[contains(@aria-expanded, 'true')]")
         for viewbtn in viewbtnHTML:
-            viewbtn.click()
+            driver.execute_script("arguments[0].click();", viewbtn)
             time.sleep(1)
         
         data = CollectContentPage(data,driver)
         firstLineHTMLOld = driver.find_elements_by_xpath("//div[@class='ui-datatable-tablewrapper']")[0].get_attribute('innerHTML')
         nxtbtnHTML = driver.find_elements_by_xpath("//div[@id='mainForm:pageNav']//a[contains(@class, 'fa-angle-right')]")
         if len(nxtbtnHTML)>0:
-            nxtbtnHTML[0].click()
+            driver.execute_script("arguments[0].click();", nxtbtnHTML[0])
             pageNumber += 1
+            initialTime = int(time.time())
             while True:
                 try:
                     firstLineHTML = driver.find_elements_by_xpath("//div[@class='ui-datatable-tablewrapper']")[0].get_attribute('innerHTML')
                 except:
                     continue
                 if firstLineHTMLOld != firstLineHTML:
-                    time.sleep(.5)
+                    time.sleep(1)
                     break
+                
+                if int(time.time())-initialTime>10:
+                    GUIChangeError('Runtime Error - 170')
+                    driver.quit()
+                    GUIKill()
         else:
             break
     
     data = ProcessData(data)
         
     CreateFile(urlPage,data,driver)
-    
-    driver.quit()
 
 def main():
+    from selenium import webdriver
+    
+    global urlPages,outputFolder
+    
+    urlPages,settings = GUI('SportStats')
+    
+    outputFolder = settings['Path']
+    
     lenurls = len(urlPages)
+    if lenurls>0:
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("headless")
+        chrome_options.add_argument('--log-level=3')
+        driver = webdriver.Chrome(options=chrome_options)
+    
     for i,urlPage in enumerate(urlPages):
-        print(urlPage)
-        urlInfo = 'URL: ' + str(i+1) + '/' + str(lenurls) 
-        PageScrapping(urlInfo,urlPage)
+        urlInfo = 'URL: '+urlPage
+        initialTime = int(time.time())
+        while True:
+            try:
+                PageScrapping(driver,urlInfo,urlPage)
+                break
+            except:
+                if int(time.time())-initialTime>30:
+                    GUIChangeError(urlInfo+'\n Runtime Error - 202')
+                    driver.quit()
+                    GUIKill()
+            
+            
+        
+    if lenurls>0:
+        driver.quit()
+        
+    GUIKill()
     return
 
 main()

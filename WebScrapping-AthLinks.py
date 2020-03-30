@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # specify urls
-urlPages = ['https://www.athlinks.com/event/34627/results/Event/257173/Course/363224/Results','https://www.athlinks.com/event/207930/results/Event/176340/Course/1022122/Results','https://www.athlinks.com/event/207930/results/Event/176340/Course/1022117/Results','https://www.athlinks.com/event/207930/results/Event/176340/Course/1022116/Results ','https://www.athlinks.com/event/207930/results/Event/176340/Course/243690/Results','https://www.athlinks.com/event/213853/results/Event/668372/Course/1120242/Results','https://www.athlinks.com/event/213853/results/Event/668372/Course/1120051/Results','https://www.athlinks.com/event/213853/results/Event/751605/Course/1266989/Results','https://www.athlinks.com/event/213853/results/Event/751605/Course/1266986/Results','https://www.athlinks.com/event/213853/results/Event/870081/Course/1646240/Results','https://www.athlinks.com/event/213853/results/Event/870081/Course/1646210/Results']
+urlPages = []
 
 # Specify the sleep time
 sleepTime = 2
@@ -15,7 +15,7 @@ oldColumnName = ['GENDER']
 newColumnName = ['GENDER PLACE']
 
 # Specify output folder
-outputFolder = "/home/setup/Documents/roadraceresults/Results/Unsent Results/AthLinks/"
+outputFolder = ''
 
 #===============================================================================================================================================
 #
@@ -31,28 +31,16 @@ Created on Thu Mar  5 15:29:20 2020
 
 # import libraries
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 import time
 import re
+from WebScrapping import CollectData,CreateFinalFile,GUI,GUIKill,GUIChangeStatus,GUIChangeError
 
 #import pandas as pd
 #import urllib.request
 #from bs4 import BeautifulSoup
 
 
-def CollectData(urlpage):
-    chrome_options = Options()
-    chrome_options.add_argument("--start-maximized")
-    driver = webdriver.Chrome(options=chrome_options)
-    driver.get(urlpage)
-    time.sleep(6)
-    
-    cookiesbtnHTML = driver.find_elements_by_xpath("//button[contains(text(), 'okay, got it')]")
-    cookiesbtnHTML[0].click()
-    
-    return driver
-
-def CollectOuterHeader(driver):
+def CollectHeader(driver):
     columnsHTML = driver.find_elements_by_xpath("//div[@class='row mx-0']/div")
     data = []
     for columnHTML in columnsHTML:
@@ -64,33 +52,35 @@ def CollectOuterHeader(driver):
         
     return data
 
-def CollectOuterData(data,driver):
+def CollectContent(data,driver):
     results = driver.find_elements_by_xpath("//div[contains(@class,'link-to-irp')]/div")
     
     if data is None:
-        data = CollectOuterHeader(driver)
+        data = CollectHeader(driver)
     num_columns = len(data)
     
     for i,result in enumerate(results):
         try:
             data[i%num_columns].append(result.text)
         except:
-            print("Something went wrong, contact Pedro Salamoni [1]")
+            GUIChangeError('Runtime Error - 67')
                 
     return data
 
 def CollectContentPage(data,driver):
-    outerData = CollectOuterData(data[0],driver)
-    return [outerData,None]
+    data = CollectContent(data,driver)
+    return data
 
 def ProcessData(bulkData):
-    data = [[],[]]
+    import pandas as pd
+    
+    data = []
     
     bulkData.pop()
     
     dataadd = [['NAME'],['AGE'],['BIB'],['CITY'],['COUNTRY']]
     
-    for column in bulkData[0][0][1:]:
+    for column in bulkData[0][1:]:
         [bulk,name,age,bib,country] = re.split('\n',column)
         country = re.split(', ',country)
         
@@ -107,98 +97,106 @@ def ProcessData(bulkData):
         dataadd[3].append(city)
         dataadd[4].append(country)
         
-    bulkData[0].pop(0)
-    bulkData[0] = dataadd + bulkData[0]
+    bulkData.pop(0)
+    bulkData = dataadd + bulkData
         
-    for column in bulkData[0]:
+    for column in bulkData:
         if ((column[0] in outerAimedData) or (re.match(r"\d+:\d+:\d+(\.\d+)*", column[1]))):
             try:
                 column[0] = newColumnName[oldColumnName.index(column[0])]
-                data[0].append(column)
+                data.append(column)
             except:
-                data[0].append(column)
+                data.append(column)
+                
+    data = pd.DataFrame(data).set_index(0).T
+    data['BIB'] = data['BIB'].replace('Bib ','', regex=True)
+    data['PACE'] = data['PACE'].replace('\nMIN/MI','', regex=True)
             
     return data
 
 def CreateFile(urlPage,data,driver):
+    global outputFolder
+    
     raceTitleHTML = driver.find_elements_by_xpath("//h1[@id='master-event-name']")
     raceTitle = raceTitleHTML[0].text
     
     raceDateTypeHTML = driver.find_elements_by_xpath("//div[@id='total-results-string']/preceding-sibling::div[1]")
     raceDate = '_' + raceDateTypeHTML[0].text
     
-    fileContent = urlPage + '\n' + raceTitle + '\nline 1\nline 2\nline 3\nline 4\n'
-    maxlenout = []
-    
-    #Write equals
-    for i in range(len(data[0])):
-        maxlenout.append(len(max(data[0][i], key=len))) 
-        fileContent += '='*maxlenout[i]
-        fileContent += ' '
-    
-    fileContent += '\n'
-    
-    #Write Headings
-    for i in range(len(data[0])):
-        newContent = str(data[0][i].pop(0))
-        fileContent += newContent
-        fileContent += ' '*(maxlenout[i]-len(newContent))
-        fileContent += ' '
-        
-    fileContent += '\n'
-        
-    #Write equals
-    for i in range(len(data[0])):
-        fileContent += '='*maxlenout[i]
-        fileContent += ' '
-    
-    fileContent += '\n'
-    
-    #Write data
-    for _ in range(len(data[0][0])):
-        for i in range(len(data[0])):
-            newContent = str(data[0][i].pop(0))
-            newContent = newContent.replace('\n',' ')
-            newContent = newContent.replace('Bib ','')
-            newContent = newContent.replace(' min/mi','')
-            fileContent += newContent
-            fileContent += ' '*(maxlenout[i]-len(newContent))
-            fileContent += ' '
-            
-        fileContent += '\n'
+    heading = urlPage + '\n' + raceTitle + '\n' + raceDate + '\nline 1\nline 2\nline 3\nline 4\n'
       
     fileName = outputFolder + raceTitle + raceDate + ".txt"
     
-    file = open(fileName,"w")
-    
-    file.write(fileContent)
+    CreateFinalFile(fileName,data,heading)
             
 
-def PageScrapping(urlPage):
-    driver = CollectData(urlPage)
-    data = [None,None]
+def PageScrapping(driver,urlInfo,urlPage):
+    driver = CollectData(driver,urlPage)
+    time.sleep(6)
+    
+    cookiesbtnHTML = driver.find_elements_by_xpath("//button[contains(text(), 'okay, got it')]")
+    driver.execute_script("arguments[0].click();", cookiesbtnHTML[0])
+    
+    
+    data = None
     pageNumber=1
     
     while True:
-        print('Page:',pageNumber)
+        
+        GUIChangeStatus(urlInfo+' Page: '+str(pageNumber))
+        
         data = CollectContentPage(data,driver)
         nxtbtnHTML = driver.find_elements_by_xpath("//div[@id='pager']//button[contains(text(), '>')]")
         if (len(nxtbtnHTML)<=0):
             break
-        nxtbtnHTML[0].click()
+        driver.execute_script("arguments[0].click();", nxtbtnHTML[0])
         pageNumber += 1
         time.sleep(sleepTime)
     
     data = ProcessData(data)
         
-    CreateFile(urlPage,data,driver)
+    CreateFile(urlPage,[data,None],driver)
     
     driver.quit()
     return
 
 def main():
-    for urlPage in urlPages:
-        print(urlPage)
-        PageScrapping(urlPage)
+    
+    global urlPages,outputFolder
+    
+    urlPages,settings = GUI('AthLinks')
+    
+    outputFolder = settings['Path']
+    
+    lenurls = len(urlPages)
+    if lenurls>0:
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("headless")
+        chrome_options.add_argument("--window-size=1325x744")
+        chrome_options.add_argument('--log-level=3')
+        driver = webdriver.Chrome(options=chrome_options)
+    
+    for i,urlPage in enumerate(urlPages):
+        urlInfo = 'URL: '+urlPage
+        initialTime = int(time.time())
+        while True:
+# =============================================================================
+#             try:
+# =============================================================================
+            PageScrapping(driver,urlInfo,urlPage)
+            break
+# =============================================================================
+#             except:
+#                 if int(time.time())-initialTime>30:
+#                     GUIChangeError(urlInfo+'\n Runtime Error - 186')
+#                     driver.quit()
+#                     GUIKill()
+# =============================================================================
+        
+    if lenurls>0:
+        driver.quit()
+        
+    GUIKill()
+    return
         
 main()

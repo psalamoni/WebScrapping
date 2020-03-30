@@ -118,6 +118,8 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
+/settings
+/SportStats
 /site
 
 # mypy
