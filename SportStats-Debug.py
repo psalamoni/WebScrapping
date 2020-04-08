@@ -31,8 +31,8 @@ Created on Thu Mar  5 15:29:20 2020
 """
 
 # import libraries
-from WebScrapping import CollectData,CollectTable,TableToData,CreateFinalFile,GUI,GUIKill,GUIChangeStatus,GUIChangeError
-from SportStats import CollectInnerData, CollectContentPage, ProcessData, CreateFile, PageScrapping
+from WebScrapping import GUI,GUIKill
+from SportStats import PageScrapping
 
 def main():
     from selenium import webdriver
@@ -46,7 +46,7 @@ def main():
     lenurls = len(urlPages)
     if lenurls>0:
         chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_argument("headless")
+        chrome_options.add_argument('headless')
         chrome_options.add_argument('--log-level=3')
         driver = webdriver.Chrome(options=chrome_options)
     
