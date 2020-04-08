@@ -32,7 +32,7 @@ Created on Thu Mar  5 15:29:20 2020
 
 # import libraries
 from WebScrapping import CollectData,CollectTable,TableToData,CreateFinalFile,GUI,GUIKill,GUIChangeStatus,GUIChangeError
-from WebScrapping-SportStats import CollectInnerData, CollectContentPage, ProcessData, CreateFile, PageScrapping
+from SportStats import CollectInnerData, CollectContentPage, ProcessData, CreateFile, PageScrapping
 
 def main():
     from selenium import webdriver
