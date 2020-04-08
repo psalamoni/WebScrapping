@@ -193,19 +193,24 @@ def main():
         chrome_options.add_argument("headless")
         chrome_options.add_argument('--log-level=3')
         driver = webdriver.Chrome(options=chrome_options)
-    
+        #driver = webdriver.Chrome()
+        
     for i,urlPage in enumerate(urlPages):
         urlInfo = 'URL: '+urlPage
         initialTime = int(time.time())
         while True:
-            try:
-                PageScrapping(driver,urlInfo,urlPage)
-                break
-            except:
-                if int(time.time())-initialTime>30:
-                    GUIChangeError(urlInfo+'\n Runtime Error - 202')
-                    driver.quit()
-                    GUIKill()
+# =============================================================================
+#             try:
+# =============================================================================
+            PageScrapping(driver,urlInfo,urlPage)
+            break
+# =============================================================================
+#             except:
+#                 if int(time.time())-initialTime>30:
+#                     GUIChangeError(urlInfo+'\n Runtime Error - 202')
+#                     driver.quit()
+#                     GUIKill()
+# =============================================================================
             
             
         

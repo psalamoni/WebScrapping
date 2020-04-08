@@ -134,8 +134,11 @@ def PageScrapping(driver,urlInfo,urlPage):
     driver = CollectData(driver,urlPage)
     time.sleep(6)
     
-    cookiesbtnHTML = driver.find_elements_by_xpath("//button[contains(text(), 'okay, got it')]")
-    driver.execute_script("arguments[0].click();", cookiesbtnHTML[0])
+    try:
+        cookiesbtnHTML = driver.find_elements_by_xpath("//button[contains(text(), 'okay, got it')]")
+        driver.execute_script("arguments[0].click();", cookiesbtnHTML[0])
+    except:
+        pass
     
     
     data = None
@@ -172,7 +175,7 @@ def main():
     if lenurls>0:
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument("headless")
-        chrome_options.add_argument("--window-size=1325x744")
+        chrome_options.add_argument("--window-size=1920,1080")
         chrome_options.add_argument('--log-level=3')
         driver = webdriver.Chrome(options=chrome_options)
     
@@ -195,7 +198,7 @@ def main():
         
     if lenurls>0:
         driver.quit()
-        
+  
     GUIKill()
     return
         
