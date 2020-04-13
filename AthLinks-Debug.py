@@ -21,16 +21,14 @@ def main():
     lenurls = len(urlPages)
     if lenurls>0:
         chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_argument("headless")
-        chrome_options.add_argument("--window-size=1920,1080")
+        #chrome_options.add_argument("headless")
+        chrome_options.add_argument("--start-maximized")
         chrome_options.add_argument('--log-level=3')
         driver = webdriver.Chrome(options=chrome_options)
     
     for i,urlPage in enumerate(urlPages):
         urlInfo = 'URL: '+urlPage
-        while True:
-            PageScrapping(driver,urlInfo,urlPage)
-            break
+        PageScrapping(driver,urlInfo,urlPage)
         
     if lenurls>0:
         driver.quit()

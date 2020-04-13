@@ -33,7 +33,7 @@ Created on Thu Mar  5 15:29:20 2020
 from selenium import webdriver
 import time
 import re
-from WebScrapping import CollectData,CreateFinalFile,GUI,GUIKill,GUIChangeStatus,GUIChangeError
+from WebScrapping import CollectData,CreateFinalFile,GUI,GUIKill,GUIChangeStatus,GUIChangeError,wait_visibility_element,wait_clickability_element
 
 #import pandas as pd
 #import urllib.request
@@ -132,9 +132,10 @@ def CreateFile(urlPage,data,driver):
 
 def PageScrapping(driver,urlInfo,urlPage):
     driver = CollectData(driver,urlPage)
-    time.sleep(6)
+    wait_visibility_element(driver,"//div[contains(@class,'link-to-irp')]/div")
     
     try:
+        wait_clickability_element(driver,"//button[contains(text(), 'okay, got it')]")
         cookiesbtnHTML = driver.find_elements_by_xpath("//button[contains(text(), 'okay, got it')]")
         driver.execute_script("arguments[0].click();", cookiesbtnHTML[0])
     except:
@@ -148,13 +149,13 @@ def PageScrapping(driver,urlInfo,urlPage):
         
         GUIChangeStatus(urlInfo+' Page: '+str(pageNumber))
         
+        wait_visibility_element(driver,"//div[contains(@class,'link-to-irp')]/div")
         data = CollectContentPage(data,driver)
         nxtbtnHTML = driver.find_elements_by_xpath("//div[@id='pager']//button[contains(text(), '>')]")
         if (len(nxtbtnHTML)<=0):
             break
         driver.execute_script("arguments[0].click();", nxtbtnHTML[0])
         pageNumber += 1
-        time.sleep(sleepTime)
     
     data = ProcessData(data)
         
@@ -174,10 +175,12 @@ def main():
     lenurls = len(urlPages)
     if lenurls>0:
         chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_argument("headless")
-        chrome_options.add_argument("--window-size=1920,1080")
+        #chrome_options.add_argument("headless")
+        #chrome_options.add_argument("--window-size=1920,1080")
+        chrome_options.add_argument("--start-maximized")
         chrome_options.add_argument('--log-level=3')
         driver = webdriver.Chrome(options=chrome_options)
+        driver.minimize_window()
     
     for i,urlPage in enumerate(urlPages):
         urlInfo = 'URL: '+urlPage
