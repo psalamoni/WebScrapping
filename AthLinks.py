@@ -183,18 +183,14 @@ def main():
         urlInfo = 'URL: '+urlPage
         initialTime = int(time.time())
         while True:
-# =============================================================================
-#             try:
-# =============================================================================
-            PageScrapping(driver,urlInfo,urlPage)
-            break
-# =============================================================================
-#             except:
-#                 if int(time.time())-initialTime>30:
-#                     GUIChangeError(urlInfo+'\n Runtime Error - 186')
-#                     driver.quit()
-#                     GUIKill()
-# =============================================================================
+            try:
+                PageScrapping(driver,urlInfo,urlPage)
+                break
+            except:
+                if int(time.time())-initialTime>30:
+                    GUIChangeError(urlInfo+'\n Runtime Error - 186')
+                    driver.quit()
+                    GUIKill()
         
     if lenurls>0:
         driver.quit()
@@ -202,4 +198,5 @@ def main():
     GUIKill()
     return
         
-main()
+if __name__ == '__main__':
+    main()

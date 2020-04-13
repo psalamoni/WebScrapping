@@ -39,6 +39,8 @@ def main():
     
     global urlPages,outputFolder
     
+    print('teste')
+    
     urlPages,settings = GUI('SportStats')
     
     outputFolder = settings['Path']
@@ -60,4 +62,5 @@ def main():
     GUIKill()
     return
 
-main()
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,241 @@
+https://www.sportstats.ca/display-results.xhtml?raceid=6370
+XEROX 10 Km
+2002-08-20 • 10Km Results
+
+line 1
+line 2
+line 3
+line 4
+=====  ========================  ==========  ======  ==============  ==========  ================  ==========  =========
+  BIB  Name                      Category      Rank    Gender Place  gun time    City              Province    Country
+=====  ========================  ==========  ======  ==============  ==========  ================  ==========  =========
+  177  ANDRE OKENGE              M30-39           1               1  00:33:40.4  Nepean            ON          CAN
+  210  LARRY MCCLOSKEY           M40-49           2               2  00:33:41.3  Ottawa            ON          CAN
+  157  HUGH STRANGE              M20-29           3               3  00:34:03.9  Ottawa            ON          CAN
+  155  HOWARD STANLEY            M30-39           4               4  00:34:14.0  Ottawa            ON          CAN
+  209  PATRICK MACKENZIE         M30-39           5               5  00:34:24.7  AYLMER            QC          CAN
+  147  MILAN SKUBNIK             M40-49           6               6  00:35:41.2  Kanata            ON          CAN
+  228  DAVE KARY                 M40-49           7               7  00:35:44.1  Ottawa            ON          CAN
+  128  GLENDON PYE               M30-39           8               8  00:36:17.8  Orleans           ON          CAN
+  150  SHAWN SMITH               M20-29           9               9  00:36:21.1  Ottawa            ON          CAN
+   29  MARC-ANDR CHARETTE        M30-39          10              10  00:36:21.9  Hull              QC          CAN
+  156  ANGELA STRANGE            F20-29          11               1  00:36:40.3  Ottawa            ON          CAN
+  220  ALAIN LOUGARE             M40-49          12              11  00:37:00.4  GATINEAU          QC          CAN
+  201  GEORGE REID               M40-49          13              12  00:37:05.7  Ottawa            ON          CAN
+  101  DEBBIE MAKLIN             F30-39          14               2  00:37:07.7  Ottawa            ON          CAN
+  202  LOUIS TAY                 M30-39          15              13  00:37:09.0  KINGSTON          ON          CAN
+   56  JACQUES GAGNON            M50+            16              14  00:37:13.9  Chelsea           QC          CAN
+   30  GLENN CHENEY              M40-49          17              15  00:37:15.7  Ottawa            ON          CAN
+  131  GEOFF RIGGS               M30-39          18              16  00:37:26.2  Ottawa            ON          CAN
+  191  CHRISTOPHER PAINE         M40-49          19              17  00:37:28.0  Ottawa            ON          CAN
+   79  BRAD JONES                M40-49          20              18  00:37:40.7  Almonte           ON          CAN
+   47  SUSAN DURRELL             F30-39          21               3  00:38:15.1  Ottawa            ON          CAN
+   71  DAVID HICKEY              M30-39          22              19  00:38:16.1  Ottawa            ON          CAN
+  138  ELI SCHWARTZ              M20-29          23              20  00:38:20.5  Ottawa            ON          CAN
+  130  ALAN RICHTER              M20-29          24              21  00:38:23.7  Ottawa            ON          CAN
+   26  BRIAN CAMPBELL            M40-49          25              22  00:38:29.6  Renfrew           ON          CAN
+    2  NATHAN ALIGIZAKIS         M20-29          26              23  00:38:34.1  Ottawa            ON          CAN
+   28  COLIN CASTEIN             M20-29          27              24  00:39:07.3  Ottawa            ON          CAN
+  218  ERIK WINDFELD             M30-39          28              25  00:39:09.2  Ottawa            ON          CAN
+  145  TONY SHAW                 M40-49          29              26  00:39:17.1  Ottawa            ON          CAN
+   25  STEWART CAMPBELL          M40-49          30              27  00:39:31.6  Pembroke          ON          CAN
+    3  ALLAN ANDERSON            M40-49          31              28  00:39:34.8  Ottawa            ON          CAN
+   83  SHEILA KEALEY             F30-39          32               4  00:39:39.5  Ottawa            ON          CAN
+    8  ANDREW BAECHLER           M20-29          33              29  00:39:49.1  Ottawa            ON          CAN
+   64  SIMON GOOD                M40-49          34              30  00:39:52.9  Ottawa            ON          CAN
+  242  DEREK TEEVAN              M30-39          35              31  00:39:54.0  Ottawa            ON          CAN
+  100  JOHN SOBEY                M40-49          36              32  00:40:28.0  Ottawa            ON          CAN
+  204  RICH MANERY               M30-39          37              33  00:40:33.7  Ottawa            ON          CAN
+  173  RALEIGH YOUNG             M50+            38              34  00:40:48.9  Orleans           ON          CAN
+  189  JEAN MARC BENOIT          M30-39          39              35  00:40:54.9  Ottawa            ON          CAN
+    5  BERNIE ARMOUR             M30-39          40              36  00:41:07.9  Kanata            ON          CAN
+  207  HEATHER HILLSBURG         F20-29          41               5  00:41:12.0  MANOTICK          ON          CAN
+  170  STEPHEN WILHELM           M30-39          42              37  00:41:14.0  Ottawa            ON          CAN
+   91  SCOTT LANGLEY             M20-29          43              38  00:41:32.4  Ottawa            ON          CAN
+  194  AMANDA SHAW               F30-39          44               6  00:41:40.2  HULL              QC          CAN
+   38  MICHEL CREPIN             M40-49          45              39  00:41:47.8  Nepean            ON          CAN
+  125  DENIS POTVIN              M40-49          46              40  00:41:55.4  Hull              QC          CAN
+  199  KELLY KNOLL               F30-39          47               7  00:41:57.5  Ottawa            ON          CAN
+   99  SCOTT MACKINNON           M30-39          48              41  00:41:58.2  Ottawa            ON          CAN
+  121  JANICE PALMER             F30-39          49               8  00:41:58.9  Ottawa            ON          CAN
+  109  GÉRARD MINER              M50+            50              42  00:42:07.9  Ottawa            ON          CAN
+  243  CLINTON LAHNALAMPI        M20-29          51              43  00:42:25.0  COPPER CLIFF                     
+  183  GARY HUTCHINSON           M40-49          52              44  00:42:31.1  Orleans           ON          CAN
+  211  MICHAEL AUSTEN            M19-            53              45  00:42:40.8  PEMBROKE          ON          CAN
+   42  GRANT DAWSON              M20-29          54              46  00:42:47.1  Ottawa            ON          CAN
+  166  SHANNON TOWNSEND          F30-39          55               9  00:42:48.1  Chelsea           QC          CAN
+  160  ERICK TAILLEFER           M20-29          56              47  00:43:05.0  Ottawa            ON          CAN
+  217  BEN-ZION CASPI            M50+            57              48  00:43:06.9  Ottawa            ON          CAN
+  205  LISA GAUTHIER             F30-39          58              10  00:43:14.8  HULL              QC          CAN
+   85  KERRY KENNEDY             M50+            59              49  00:43:20.6  Kanata            ON          CAN
+  143  ROGER SERAFINI            M40-49          60              50  00:43:34.2  Manotick          ON          CAN
+  136  SUZANNE SCHRIEK                           61              11  00:43:36.7  Ottawa            ON          CAN
+   19  IAN BOYLE                 M30-39          62              51  00:43:48.7  Ottawa            ON          CAN
+  159  IAN SYMES                 M30-39          63              52  00:43:57.8  Ottawa            ON          CAN
+   12  MARC BEAUDRY              M30-39          64              53  00:44:03.4  Cantley                          
+  224  RUSS MCDONNEL             M30-39          65              54  00:44:05.4  Ottawa            ON          CAN
+  221  LECERF GERALD             M40-49          66              55  00:44:08.2  GATINEAU          QC          CAN
+  231  DAVID BOUGHNER            M40-49          67              56  00:44:10.7  Ottawa            ON          CAN
+  195  PAUL O'BLENES             M40-49          68              57  00:44:17.4  HULL              QC          CAN
+  200  VIVIAN ROBINSON           F30-39          69              12  00:44:23.0  Ottawa            ON          CAN
+  153  GERRY ST. AUBIN           M40-49          70              58  00:44:24.1  Ottawa            ON          CAN
+   35  VINCE CLIFFORD            M30-39          71              59  00:44:31.2  Ottawa            ON          CAN
+  240  JOEY MURPHY               M30-39          72              60  00:44:55.4  Ottawa            ON          CAN
+   51  ED FITCHETT               M30-39          73              61  00:44:56.2  Ottawa            ON          CAN
+  227  BERNIE WYNIA              M30-39          74              62  00:44:59.3  Ottawa            ON          CAN
+   72  BRIAN HILL                M20-29          75              63  00:45:05.5  Ottawa            ON          CAN
+  102  ANDR MANSEAU              M40-49          76              64  00:45:10.3  Chelsea           QC          CAN
+   97  JOE LOTT                  M40-49          77              65  00:45:14.0  Ottawa            ON          CAN
+  237  PAT KELLY                 M30-39          78              66  00:45:18.3  Ottawa            ON          CAN
+  238  DAN ZINIUK                M40-49          79              67  00:45:19.1  Ottawa            ON          CAN
+  192  WILLIAM LUDLOW            M40-49          80              68  00:45:20.4  LACHINE           QC          CAN
+  190  RAEANN ROSE               F40-49          81              13  00:45:21.0  LACHINE           QC          CAN
+   65  IAN GOVAN                 M50+            82              69  00:45:21.8  Kanata            ON          CAN
+   37  LINDA CONWAY              F40-49          83              14  00:45:28.6  Ottawa            ON          CAN
+  181  MILLER MACPHERSON         M30-39          84              70  00:45:30.5  Ottawa            ON          CAN
+  245  JENNIFER HYDE             F30-39          85              15  00:45:34.9  Ottawa            ON          CAN
+  186  RICK MCQUAIG              M40-49          86              71  00:45:36.0  KANATA            ON          CAN
+  169  ART WEBSTER               M40-49          87              72  00:45:43.8  Kemptville        ON          CAN
+  229  RICK BEEKMANS             M40-49          88              73  00:45:51.4  NEPEAN            ON          CAN
+    9  RICK BAIRD                M40-49          89              74  00:46:06.1  Ottawa            ON          CAN
+  213  GEORGE BODONI             M30-39          90              75  00:46:17.2  Ottawa            ON          CAN
+  108  BRUCE McLAURIN            M40-49          91              76  00:46:28.5  Ottawa            ON          CAN
+   74  ROBERT HORNUNG            M30-39          92              77  00:46:35.9  Ottawa            ON          CAN
+   96  ROD LEVER                 M20-29          93              78  00:46:46.3  Ottawa            ON          CAN
+   69  LOUISE HAMELIN            F40-49          94              16  00:46:50.4  Orleans           ON          CAN
+  165  GEORGE TORRANCE           M50+            95              79  00:46:53.4  Ottawa            ON          CAN
+  106  ANDREW McCONNACHIE        M19-            96              80  00:47:06.6  Nepean            ON          CAN
+  122  GLEN PEACOCK              M30-39          97              81  00:47:07.8  Ottawa            ON          CAN
+  113  JENNA MORRIS              F30-39          98              17  00:47:13.2  Ottawa            ON          CAN
+  208  ROGER TREMBLAY            M40-49          99              82  00:47:15.6  CARLSBAD SPRINGS  ON          CAN
+  129  BARRY REID                M30-39         100              83  00:47:19.9  Edmonton          AB          CAN
+   22  KATHY BRADLEY             F20-29         101              18  00:47:20.9  Ottawa            ON          CAN
+   32  GERRY CLARKE              M50+           102              84  00:47:24.0  Ottawa            ON          CAN
+   52  SHARON FITZMAURICE-AVERY  F30-39         103              19  00:47:26.9  Kanata            ON          CAN
+   46  DUNCAN EFFORD             M30-39         104              85  00:47:37.5  Ottawa            ON          CAN
+  206  CHARLES PRYCE             M50+           105              86  00:47:38.5  Ottawa            ON          CAN
+  152  BRYAN SOCRANSKY           M30-39         106              87  00:47:39.3  Ottawa            ON          CAN
+  141  BRIAN SENECAL             M50+           107              88  00:47:43.6  Ottawa            ON          CAN
+  110  CLAUDE MOISE              M50+           108              89  00:47:47.4  Ottawa            ON          CAN
+    6  BOB ALBERT                M40-49         109              90  00:48:00.0  Nepean            ON          CAN
+   54  AARON FOSHAY              M20-29         110              91  00:48:08.2  Ottawa            ON          CAN
+   84  ANDREW KEENAN             M30-39         111              92  00:48:11.2  Ottawa            ON          CAN
+  168  IDONESIT UDOM             M30-39         112              93  00:48:20.6  Ottawa            ON          CAN
+   76  PIERRE HUPP               M40-49         113              94  00:48:30.9  Gatineau          QC          CAN
+  111  BRUCE MONTGOMERY          M40-49         114              95  00:48:34.7  Orleans           ON          CAN
+   73  TRICIA HOO                F20-29         115              20  00:48:39.4  Ottawa            ON          CAN
+  235  MARK ROOS                 M30-39         116              96  00:48:43.9  BUCKINGHAM                       
+   27  GERARD CASSAN             M40-49         117              97  00:48:46.1  Ottawa            ON          CAN
+   57  ANDY GALLANT              M30-39         118              98  00:48:50.8  Ottawa            ON          CAN
+   11  BRIAN BAX                 M30-39         119              99  00:48:54.5  Ottawa            ON          CAN
+  149  PATRICK SMITH             M20-29         120             100  00:49:00.0  Ottawa            ON          CAN
+  114  SHELDON MORRISON          M30-39         121             101  00:49:07.7  Renfrew           ON          CAN
+   82  BILL KANE                 M40-49         122             102  00:49:21.0  Orleans           ON          CAN
+   67  DANIEL GUERRETTE          M40-49         123             103  00:49:25.0  Nepean            ON          CAN
+   94  DIANE LEMIEUX             F30-39         124              21  00:49:26.0  Hull              QC          CAN
+  233  NATHALIE LAPOINTE         F40-49         125              22  00:49:32.9  Ottawa            ON          CAN
+  135  CYNTHIA RUTTERS           F20-29         126              23  00:49:33.6  Winchester        ON          CAN
+  139  DAVE SEDDON               M30-39         127             104  00:49:34.6  Carleton Place    ON          CAN
+   15  SHELLY BINCH              F30-39         128              24  00:49:36.6  Ottawa            ON          CAN
+  154  PIERRE ST-AMOUR           M40-49         129             105  00:49:39.1  Gloucester        ON          CAN
+  163  LISE THERIAULT            F40-49         130              25  00:49:44.5  Nepean            ON          CAN
+  214  CASSANDRA CRABB           F30-39         131              26  00:49:45.2  Ottawa            ON          CAN
+  161  SUSAN TEREPOSKY           F30-39         132              27  00:50:22.1  Nepean            ON          CAN
+   24  ALLAN CAMERON             M40-49         133             106  00:50:40.8  Ottawa            ON          CAN
+   34  JAN CLEARY                F40-49         134              28  00:50:47.4  Ottawa            ON          CAN
+   98  MARIAN MACKAY             F40-49         135              29  00:50:59.3  Stittsville       ON          CAN
+  103  DOMINIQUE MARCOTTE        F30-39         136              30  00:51:03.7  Manotick          ON          CAN
+   55  MIKE GAETAN               M30-39         137             107  00:51:04.9  Bedford                          
+  127  LAYLA PRIEUR              F20-29         138              31  00:51:07.7  Nepean            ON          CAN
+  236  KAMBELLE SAINT-LAURENT    F40-49         139              32  00:51:09.0  Ottawa            ON          CAN
+  182  GEOFF BURRIDGE            M50+           140             108  00:51:12.5  Ottawa            ON          CAN
+  164  BOB THOMPSON              M40-49         141             109  00:51:18.7  Russell           ON          CAN
+  239  COLIN BUSH                M20-29         142             110  00:51:21.1  Ottawa            ON          CAN
+  179  BOB MACDONALD             M40-49         143             111  00:51:25.4  Kanata            ON          CAN
+  171  RHYS WILLIAMS             M40-49         144             112  00:51:26.3  Orleans           ON          CAN
+   41  STEPHEN DAVIES            M30-39         145             113  00:51:39.7  Ottawa            ON          CAN
+  225  JANICE TIBBETTS           F40-49         146              33  00:51:43.4  Ottawa            ON          CAN
+  137  FRANK SCHULZ              M40-49         147             114  00:51:46.7  Ottawa            ON          CAN
+  185  JAY D. ELLENBOGEN         M50+           148             115  00:51:58.4  Ottawa            ON          CAN
+   13  MATTHEW BEHAN             M30-39         149             116  00:52:11.5  Ottawa            ON          CAN
+  115  MICHAEL MORRISON          M40-49         150             117  00:52:14.5  Shawville                        
+  134  AMY ROSE                  F30-39         151              34  00:52:16.2  Ottawa            ON          CAN
+  142  DENISE SENECAL            F50+           152              35  00:52:19.7  Ottawa            ON          CAN
+  120  MIA OVERDUIN              F50+           153              36  00:52:20.7  Aylmer            QC          CAN
+   17  TERRI BOLSTER             F50+           154              37  00:52:27.0  Gloucester        ON          CAN
+  232  SARAH BULLOCK             F30-39         155              38  00:52:30.8  Ottawa            ON          CAN
+  198  MIKE ROPER                M40-49         156             118  00:52:54.3  KANATA            ON          CAN
+   93  ANNE LAUZON               F20-29         157              39  00:52:58.9  Neapen                           
+   75  CAROLYN HRADECKY          F30-39         158              40  00:52:59.8  Nepean            ON          CAN
+   60  JESSICA GIBBS             F20-29         159              41  00:53:00.8  Ottawa            ON          CAN
+  123  DENISE PENNETT            F30-39         160              42  00:53:02.9  Nepean            ON          CAN
+  178  JOHN KIM                  M30-39         161             119  00:53:12.1  Ottawa            ON          CAN
+  146  KARL SIEMONSEN            M40-49         162             120  00:53:16.5  Ottawa            ON          CAN
+   87  ROY KOERNER               M50+           163             121  00:53:19.1  Ottawa            ON          CAN
+   48  DAVE EIBNER               M30-39         164             122  00:53:23.8  Ottawa            ON          CAN
+   63  REGINALD A. GIEKES        M50+           165             123  00:53:24.7  Stittsville       ON          CAN
+   45  TIM DRAPER                M20-29         166             124  00:53:33.2  Ottawa            ON          CAN
+   92  YVES LAPALME              M30-39         167             125  00:53:38.3  Ottawa            ON          CAN
+  162  SUSAN TERNAN              F20-29         168              43  00:53:45.4  Ottawa            ON          CAN
+  222  BRIGITTE ROY              F30-39         169              44  00:53:46.2  CLARENCE CREEK                   
+   16  MARIO BIZIER              M40-49         170             126  00:53:55.1  Hull              QC          CAN
+  148  H. JOHN SMITH             M50+           171             127  00:53:55.8  Ottawa            ON          CAN
+   36  JOHN CONNELL              M40-49         172             128  00:53:57.2  Ottawa            ON          CAN
+   68  DENIS GUINDON             M40-49         173             129  00:54:06.2  Nepean            ON          CAN
+  230  SYLVIE LAPOINT            F40-49         174              45  00:54:24.3  Ottawa            ON          CAN
+   18  GENEVIEVE BOUCHARD        F30-39         175              46  00:54:26.5  Hull              QC          CAN
+  187  WENDY MCQUAIG             F40-49         176              47  00:54:44.8  KANATA            ON          CAN
+   80  VIREN JOSHI               M30-39         177             130  00:54:51.8  Ottawa            ON          CAN
+  219  JASON ROBERTS             M20-29         178             131  00:55:16.6  ORLEANS           ON          CAN
+  241  TONY TREMAIN              M30-39         179             132  00:55:23.6  Ottawa            ON          CAN
+   53  PAUL W. FORGET            M30-39         180             133  00:55:33.0  Victoria          BC          CAN
+   66  WENDY GREEN               F30-39         181              48  00:55:39.2  Nepean            ON          CAN
+  132  ANTHONY RIZK              M20-29         182             134  00:55:43.8  Ottawa            ON          CAN
+   23  BOB BRAULT                M50+           183             135  00:56:04.2  Ottawa            ON          CAN
+  226  SYLVIA THOMSON            F30-39         184              49  00:56:22.2  Ottawa            ON          CAN
+  184  GREG BOOTH                M30-39         185             136  00:56:24.2  Ottawa            ON          CAN
+  104  ERIK MARKHAUSER           M20-29         186             137  00:56:32.2  Ottawa            ON          CAN
+  212  CINDY ROBINSON            F30-39         187              50  00:56:39.2  Ottawa            ON          CAN
+  112  JAMIE MOREL               M30-39         188             138  00:56:40.1  Petawawa          ON          CAN
+   50  NADINE FAULKNER           F30-39         189              51  00:56:43.3  Ottawa            ON          CAN
+  180  RAMON SEPULVEDA           M50+           190             139  00:57:06.5  Ottawa            ON          CAN
+  223  DON FRASER                M50+           191             140  00:57:12.9  KANATA            ON          CAN
+   21  BRIAN BRADLEY             M50+           192             141  00:57:17.8  Nepean            ON          CAN
+  140  KEVIN SEIDEL              M30-39         193             142  00:57:23.3  Ottawa            ON          CAN
+   95  SANDRA LETT               F40-49         194              52  00:57:26.6  Nepean            ON          CAN
+  151  GINA SNIDER               F30-39         195              53  00:57:40.9  Cornwall          ON          CAN
+  105  IAN McCONNACHIE           M50+           196             143  00:57:45.7  Nepean            ON          CAN
+  158  JEFF SWEET                M20-29         197             144  00:57:48.9  Ottawa            ON          CAN
+  197  JOHN MCGREGOR             M50+           198             145  00:58:07.1  MILEHOUSE                        
+  244  MAXINE MORRISON           F40-49         199              54  00:58:09.6  Ottawa            ON          CAN
+  215  MICHELLE ST GERMAIN       F30-39         200              55  00:58:33.9  Ottawa            ON          CAN
+  216  ANDRE SIGMAN              M40-49         201             146  00:58:35.3  Ottawa            ON          CAN
+   43  SELWYN de SOUZA           M40-49         202             147  00:59:22.3  Ottawa            ON          CAN
+   39  ERIN CRERAR               F20-29         203              56  00:59:38.6  Ottawa            ON          CAN
+  119  GERRIE NORMOYLE           F40-49         204              57  00:59:54.8  Ottawa            ON          CAN
+   78  GB JOHNSTON               M50+           205             148  01:00:00.4  Gloucester        ON          CAN
+   49  TRACY ENGLISH             F20-29         206              58  01:00:40.5  Ottawa            ON          CAN
+   14  DOMINIQUE BERGEVIN        F20-29         207              59  01:00:41.5  Ottawa            ON          CAN
+  124  BRENDA PILON              F30-39         208              60  01:00:42.2  Ottawa            ON          CAN
+  188  DENISE COUILLARD          F30-39         209              61  01:00:52.8  Ottawa            ON          CAN
+   58  ADRIANA GARCIA            F20-29         210              62  01:01:03.2  Ottawa            ON          CAN
+  116  ANDY MUTCH                M40-49         211             149  01:01:03.8  Ottawa            ON          CAN
+   90  JANET RAE LANCASTER       F40-49         212              63  01:01:29.9  Kanata            ON          CAN
+   33  JENNIFER E. CLARKE        F30-39         213              64  01:01:39.6  Kanata            ON          CAN
+  107  DONNA MCKIBBON            F30-39         214              65  01:01:42.8  Ottawa            ON          CAN
+  117  JENNIFER MYERS            F30-39         215              66  01:01:43.3  Nepean            ON          CAN
+   81  TARA KAHAN                F20-29         216              67  01:02:33.6  Ottawa            ON          CAN
+   59  DANIEL GAREAU             M40-49         217             150  01:02:34.9  Ottawa            ON          CAN
+   77  GREG JENSON               M30-39         218             151  01:02:43.3  Orleans           ON          CAN
+   70  ANISSA HASHEM             F20-29         219              68  01:03:17.6  Orleans           ON          CAN
+   40  TED DAMEN                 M40-49         220             152  01:03:25.6  Ottawa            ON          CAN
+  193  DON CHARBONEAU            M30-39         221             153  01:03:49.5  Ottawa            ON          CAN
+  172  WENDI WOODS               F50+           222              69  01:03:59.3  Ottawa            ON          CAN
+   89  MICHEL LALONDE            M50+           223             154  01:04:15.3  Ottawa            ON          CAN
+   20  REGINALD BOYLES           M50+           224             155  01:04:17.9  Rockland          ON          CAN
+  118  DARREL NEWMAN             M50+           225             156  01:05:00.4  Ottawa            ON          CAN
+  133  ARMANDE ROCHE             F40-49         226              70  01:06:53.8  Ottawa            ON          CAN
+   31  KAREN CHISHOLM            F40-49         227              71  01:07:02.7  Orleans           ON          CAN
+  144  ANNA SHANNETTE            F40-49         228              72  01:09:20.7  Nepean            ON          CAN
+  234  PETER TEARLE              M30-39         229             157  01:13:04.4  Ottawa            ON          CAN
+   86  TINA KILBRIDE             F20-29         230              73  01:28:30.0  GATINEAU          QC          CAN

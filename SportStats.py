@@ -31,7 +31,7 @@ Created on Thu Mar  5 15:29:20 2020
 """
 
 # import libraries
-from WebScrapping import CollectData,CollectTable,TableToData,CreateFinalFile,GUI,GUIKill,GUIChangeStatus,GUIChangeError
+from WebScrapping import CollectData,CollectTable,TableToData,CreateFinalFile,GUI,GUIKill,GUIChangeStatus,GUIChangeError,wait_clickability_element
 import time
 import re
 
@@ -44,12 +44,12 @@ def CollectInnerData(driver):
 
     innerTableStyleOld = CollectTable(driver,innerXpath)[0].get_attribute('style')
     innerTableHTMLOld = CollectTable(driver,innerXpath)[0].get_attribute('innerHTML')
+    wait_clickability_element(driver,"//tr[@role='row']//td[4]//a")
     namesHTML = driver.find_elements_by_xpath("//tr[@role='row']//td[4]//a")
     
     for i,nameHTML in enumerate(namesHTML):
         try:
             driver.execute_script("arguments[0].click();", nameHTML)
-            #time.sleep(sleepTime)
         except:
             if data is None:
                 void += 1
@@ -200,7 +200,7 @@ def main():
                 break
             except:
                 if int(time.time())-initialTime>30:
-                    GUIChangeError(urlInfo+'\n Runtime Error - 202')
+                    GUIChangeError(urlInfo+'\n Runtime ALOK Error - 202')
                     driver.quit()
                     GUIKill()
             
@@ -212,4 +212,5 @@ def main():
     GUIKill()
     return
 
-main()
+if __name__ == '__main__':
+    main()
