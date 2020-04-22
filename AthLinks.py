@@ -81,7 +81,15 @@ def ProcessData(bulkData):
     dataadd = [['NAME'],['AGE'],['BIB'],['CITY'],['COUNTRY']]
     
     for column in bulkData[0][1:]:
-        [bulk,name,age,bib,country] = re.split('\n',column)
+        if len(re.split('\n',column)) == 5:
+            [bulk,name,age,bib,country] = re.split('\n',column)
+        elif len(re.split('\n',column)) == 4:
+            [bulk,name,age,country] = re.split('\n',column)
+            bib = None
+        else:
+            [bulk,name,country] = re.split('\n',column)
+            age = None
+            bib = None
         country = re.split(', ',country)
         
         if len(country)>1 :
